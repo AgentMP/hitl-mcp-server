@@ -1,0 +1,25 @@
+{
+  "name": "hitl-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP Server for HITL (Human In The Loop) escalations",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.5.0",
+    "axios": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "hitl",
+    "human-in-the-loop",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT"
+}

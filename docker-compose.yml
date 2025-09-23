@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  hitl-mcp-server:
+    build: .
+    container_name: hitl-mcp-server
+    environment:
+      - AGENTMP_API_KEY=${AGENTMP_API_KEY}
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+    # For MCP, we primarily use stdio, but you can expose ports if needed
+    # ports:
+    #   - "3000:3000"
+    volumes:
+      # Mount a volume if you need to persist any data
+      - ./logs:/usr/src/app/logs
+    networks:
+      - hitl-network
+
+networks:
+  hitl-network:
+    driver: bridge
