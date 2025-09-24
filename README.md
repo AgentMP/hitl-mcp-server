@@ -18,6 +18,10 @@ A Model Context Protocol (MCP) server that bridges Claude Desktop with your HITL
 - AGENTMP API Key from your platform
 - Claude Desktop application
 
+## Steps to Configure Cogito HITL on Claude Desktop
+
+(Please refer to SetupClaudeDesktop.md for steps)
+
 ## Setup
 
 ### Option 1: Docker Deployment (Recommended)
