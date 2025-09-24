@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "f0b89a56-b744-4284-ab97-9b0acc8a5d96",
+		"name": "HITL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "691278",
+		"_collection_link": "https://cloudiq.postman.co/workspace/AgentMP~039acc75-86f5-4521-9b2d-5230c12990fb/collection/691278-f0b89a56-b744-4284-ab97-9b0acc8a5d96?action=share&source=collection_link&creator=691278"
+	},
+	"item": [
+		{
+			"name": "Create HITL",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 99aeae0e6b4f4107a59d1b59010834cb3eb96ae0f667078f7cc2a296dad27785",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session_id\": \"session1234\",\n  \"agent_id\": \"myagentnotexist\",\n  \"user_prompt\": \"Test escalation request\",\n  \"proposed_action\": {\n    \"type\": \"purchase\",\n    \"item\": \"Test Item\",\n    \"amount\": 100.00\n  },\n  \"escalate_to\": {\n    \"type\": \"user\",\n    \"target_id\": \"karthik6461@gmail.com\"\n  },\n  \"priority\": \"normal\",\n  \"webhookurl\" : \"/hitlwebhook\",\n  \"webhookverificationtoken\" : \"agenttokent1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve HITL",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 99aeae0e6b4f4107a59d1b59010834cb3eb96ae0f667078f7cc2a296dad27785",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"comments\": \"Approved for testing\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/esc-153a8e6b-ce9c-45b5-a838-14a01ee5dcb6/approve",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"esc-153a8e6b-ce9c-45b5-a838-14a01ee5dcb6",
+						"approve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HITL - Modify",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 99aeae0e6b4f4107a59d1b59010834cb3eb96ae0f667078f7cc2a296dad27785",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"modified_action\": {\n      \"type\": \"purchase\",\n      \"item\": \"Modified Test Item\",\n      \"amount\": 110.00\n    },\n    \"comments\": \"Modified for testing\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/esc-fbbf30fd-a7d0-4183-a406-309d71b72736/modify",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"esc-fbbf30fd-a7d0-4183-a406-309d71b72736",
+						"modify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HITL - Reject",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 21adf018ce014ec5af10358008d7ecb26658d2b0c9f82bbf7bd732fd8b9c9e88",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io//api/hitl/esc-564bd210-ccdc-4801-97be-a2264797bca0/reject",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"",
+						"api",
+						"hitl",
+						"esc-564bd210-ccdc-4801-97be-a2264797bca0",
+						"reject"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HITL By ID",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjY3ZDhjZWU0ZTYwYmYwMzYxNmM1ODg4NTJiMjA5MTZkNjRjMzRmYmEiLCJ0eXAiOiJKV1QifQ.eyJuYW1lIjoiRW1lcmdlVGVjaCBBZG1pbiIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLYnNEX0xKWV9RbnoxVnJwa2p4aDRHbzE0blVyYjVuQjYxWEUtTzRKb2JJSDBKZHNzPXM5Ni1jIiwiaXNzIjoiaHR0cHM6Ly9zZWN1cmV0b2tlbi5nb29nbGUuY29tL21wZGV2LTk0YTQ4IiwiYXVkIjoibXBkZXYtOTRhNDgiLCJhdXRoX3RpbWUiOjE3NDc4MDI3NjcsInVzZXJfaWQiOiJsTTRvZkRNT09saGZoZVlpQm9qT1BVV0ZnTXUxIiwic3ViIjoibE00b2ZETU9PbGhmaGVZaUJvak9QVVdGZ011MSIsImlhdCI6MTc0Nzk3NTQ3NCwiZXhwIjoxNzQ3OTc5MDc0LCJlbWFpbCI6ImVtZXJnZXRlY2guaW9AZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImZpcmViYXNlIjp7ImlkZW50aXRpZXMiOnsiZ29vZ2xlLmNvbSI6WyIxMTU3ODYzNzc5MTI3MjcyNTc1NzEiXSwiZW1haWwiOlsiZW1lcmdldGVjaC5pb0BnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJnb29nbGUuY29tIn19.LfSJUwfGXj6cl5RGrMoM9mp4L2ztSBd1MSDuhf48nefxNXymhkVM5RR1Ic9zCyX26AoyZYF-IlwkjeD0Kco1TDjYVDisYnhDlSZv6rONwJAcxRBQcQvV9_vMegQ819aEMbGbNlXAA3b2o_dDgAUl2cHTz42ORxS7Q1EM3vRfn7WADF00pFTD3Y44ttKvtDU3WeZNKAFYuxJpOQFTMFOyKa4fWTHKJW6BE5fQfh0j5ppfem0N0YdxYgp9BcM32WcgNase8l_7YY44pyFsex-d5dW5v8m7cSGRPHRDakJNI1AXFXt_3AUMBviXiWYwAae79JojUtQ0wXFDq_ge58WdcA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://backend.agentmp.io//api/hitl/esc-a6d4980b-2f1b-4ac3-b35c-2ff685629769",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"",
+						"api",
+						"hitl",
+						"esc-a6d4980b-2f1b-4ac3-b35c-2ff685629769"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My HITLs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2733bdaca884467e987d789aa26b96c546f49e082718fa7fb61efa29465dde69",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HITL",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer b458a4f096b94b5695fec2017929e637a86952963fdfad2b910995dcdee3712f",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session_id\": \"sess-test-123\",\n  \"agent_id\": \"test-agent-v1\",\n  \"user_prompt\": \"Test escalation request\",\n  \"proposed_action\": {\n    \"type\": \"purchase\",\n    \"item\": \"Test Item\",\n    \"amount\": 99.00\n  },\n  \"escalate_to\": {\n    \"type\": \"user\",\n    \"target_id\": \"karthik6461@gmail.com\"\n  },\n  \"priority\": \"normal\",\n  \"webhookurl\" : \"http://localhost:9000/api/hitl/test-webhook\",\n  \"webhookverificationtoken\": \"xyz\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nodebackendmvp-788757352670.us-west2.run.app/api/hitl",
+					"protocol": "https",
+					"host": [
+						"nodebackendmvp-788757352670",
+						"us-west2",
+						"run",
+						"app"
+					],
+					"path": [
+						"api",
+						"hitl"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HITL MCP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 5bbd92afbcf145f197493ba8288b235c827b6771d027830046926dbc5ae9bc57",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"jsonrpc\": \"2.0\",\n       \"id\": \"1\",\n       \"method\": \"hitl.create\",\n       \"params\": {\n         \"session_id\": \"session1\",\n         \"agent_id\": \"test-agent\",\n         \"user_prompt\": \"Test escalation\",\n         \"proposed_action\": {\"type\": \"purchase\", \"item\": \"Test Item\", \"amount\": 11},\n         \"escalate_to\": {\"type\": \"user\", \"target_id\": \"karthik6461@gmail.com\"},\n        \"priority\": \"normal\",\n  \"webhookurl\" : \"http://localhost:9000/api/hitl/test-webhook\",\n  \"webhookverificationtoken\": \"xyz\"\n       }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/mcp",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"mcp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ApproveHITL MCP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2c7604ac3db14edb94d7dc3b25a6fcdd8f572c1e675036a6830d9d92119b0db0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"jsonrpc\": \"2.0\",\n       \"id\": \"1\",\n       \"method\": \"hitl.approve\",\n       \"params\": {\"escalation_id\": \"esc-e237158e-4453-4c4f-b213-b9b3dd49d316\", \"comments\": \"Approved\"}\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/mcp",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"mcp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HITL Modify MCP",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 2c7604ac3db14edb94d7dc3b25a6fcdd8f572c1e675036a6830d9d92119b0db0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"jsonrpc\": \"2.0\",\n       \"id\": \"1\",\n       \"method\": \"hitl.modify\",\n       \"params\": {\n         \"escalation_id\": \"esc-dee9f2c7-ffdd-49c5-ab03-a9f4cf53e460\",\n         \"modified_action\": {\"type\": \"purchase\", \"item\": \"Modified Item\", \"amount\": 150},\n         \"comments\": \"Modified\"\n       }\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/mcp",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"mcp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HITL MCP - Auth in body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n       \"jsonrpc\": \"2.0\",\n       \"id\": \"1\",\n       \"method\": \"hitl.create\",\n       \"params\": {\n         \"session_id\": \"session1\",\n         \"agent_id\": \"test-agent\",\n         \"user_prompt\": \"Test escalation\",\n         \"proposed_action\": {\"type\": \"purchase\", \"item\": \"Test Item\", \"amount\": 100},\n         \"escalate_to\": {\"type\": \"user\", \"target_id\": \"karthik6461@gmail.com\"},\n         \"priority\": \"normal\",\n         \"authorization\": \"2c7604ac3db14edb94d7dc3b25a6fcdd8f572c1e675036a6830d9d92119b0db0\"\n       }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://backend.agentmp.io/api/hitl/mcp",
+					"protocol": "https",
+					"host": [
+						"backend",
+						"agentmp",
+						"io"
+					],
+					"path": [
+						"api",
+						"hitl",
+						"mcp"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
