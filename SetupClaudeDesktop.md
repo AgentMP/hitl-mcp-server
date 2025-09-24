@@ -51,3 +51,5 @@ Create a HITL escalation for a $50 software license purchase, then modify it to 
 5) To receive Cogito push notifications on Slack/Teams/WhatsApp/Telegram , go to https://agentmp.ai/linkchannels , select your preferred channel and configure your channel identifier. 
 
 For Teams and Slack contact your channel admin to enable AgentMP bot.
+
+6) To test out Cogito HITL API on postman you can use postman collection - HITL.postman_collection.json - in this repo.
