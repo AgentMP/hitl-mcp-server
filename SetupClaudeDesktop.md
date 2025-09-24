@@ -47,3 +47,7 @@ Get details for HITL escalation "esc-[ID-FROM-TEST-2]"
 Approve HITL escalation "esc-[ID-FROM-TEST-2]" with comment "Approved for testing purposes"
 
 Create a HITL escalation for a $50 software license purchase, then modify it to $75 enterprise license
+
+5) To receive Cogito push notifications on Slack/Teams/WhatsApp/Telegram , go to https://agentmp.ai/linkchannels , select your preferred channel and configure your channel identifier. 
+
+For Teams and Slack contact your channel admin to enable AgentMP bot.
