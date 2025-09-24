@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server that bridges Claude Desktop with your HITL (Human In The Loop) escalation service. This allows Claude to create, approve, modify, reject, and manage HITL escalations directly from Claude Desktop.
 
+https://hub.docker.com/r/agentmp/hitl-mcp-server
+
 ## Features
 
 - **Create HITL Escalations**: Create new escalation requests with proposed actions
