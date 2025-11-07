@@ -65,7 +65,7 @@ We are actively onboarding other channels. If you need to run this MCP server en
 
 Please refer to this demo video:
 
-https://github.com/AgentMP/hitl-mcp-server/blob/main/HITL%20Video%20with%20Caption.mp4
+[https://github.com/AgentMP/hitl-mcp-server/blob/main/HITL%20Video%20with%20Caption.mp4](https://github.com/AgentMP/hitl-mcp-server/blob/main/HITLDemoVideo.mp4)
 
 # HITL MCP Server
 
