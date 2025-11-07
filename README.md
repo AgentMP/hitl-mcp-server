@@ -4,7 +4,9 @@
 
 https://agentmp.ai/createapikey
 
-2) Get Local Setup Docker Image and Run it:
+(You will have to sign in using your gmail/linkedIn)
+
+2) Get Local Setup Docker Image and Run it: (Prereq - Docker desktop installed & running)
 
 docker pull agentmp/hitl-mcp-server:latest
 
@@ -23,7 +25,7 @@ docker run -d \
       "command": "docker",
       "args": ["exec", "-i", "hitl-mcp-server", "node", "app.js"],
       "env": {
-        "AGENTMP_API_KEY": "your_api_key_here"
+        "AGENTMP_API_KEY": **"your_api_key_here"**
       }
     }
   }
