@@ -52,9 +52,14 @@ Approve HITL escalation "esc-[ID-FROM-TEST-2]" with comment "Approved for testin
 
 Create a HITL escalation for a $50 software license purchase, then modify it to $75 enterprise license
 
-5) To receive Cogito push notifications on Slack/Teams/WhatsApp/Telegram , go to https://agentmp.ai/linkchannels , select your preferred channel and configure your channel identifier. 
+# Receiving push notifications
+
+5) To receive Cogito push notifications on Slack/Teams/WhatsApp/Telegram , go to https://agentmp.ai/linkchannels , select your preferred channel and configure your channel identifier.
+
 
 For Teams and Slack contact your channel admin to enable AgentMP bot.
+
+We are actively onboarding other channels. If you need to run this MCP server entirely within your firewall reachout to ops@manifoldsystems.io
 
 6) To test out Cogito HITL API on postman you can use postman collection - HITL.postman_collection.json - in this repo.
 
