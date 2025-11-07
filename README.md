@@ -89,6 +89,10 @@ https://hub.docker.com/r/agentmp/hitl-mcp-server
 - **Get Escalation Details**: Retrieve details of specific escalations
 - **List Escalations**: List all escalations for the authenticated user
 
+
+
+### If you want to build and run locally yourself ...
+
 ## Prerequisites
 
 - Node.js 18+ 
