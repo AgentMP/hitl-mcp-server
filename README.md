@@ -63,6 +63,10 @@ We are actively onboarding other channels. If you need to run this MCP server en
 
 6) To test out Cogito HITL API on postman you can use postman collection - HITL.postman_collection.json - in this repo.
 
+Please refer to this demo video:
+
+https://github.com/AgentMP/hitl-mcp-server/blob/main/HITL%20Video%20with%20Caption.mp4
+
 # HITL MCP Server
 
 # What is it?
