@@ -58,6 +58,22 @@ For Teams and Slack contact your channel admin to enable AgentMP bot.
 
 # HITL MCP Server
 
+# What is it?
+
+HITL MCP server streamlines user interactions with AI Agents that are semi-autonomous. Agents can perform their tasks and reach out to humans for approvals, status updates, feedbacks, course corrections using this MCP tool. User interactions are captured, stored for future enhancements. User interactions are managed in channels of choice by end user (slack/teams/whatsapp/telegram/web browser).
+
+# Why?
+
+1. Standardized interactions, does not assume user is sitting in front of the agent and waits for feedback/approvals
+2. Ease of use, without any new app installation
+3. Structured interactions that are stored and tracked for future reference
+4. Domain agnostic implementation
+   
+
+# Why Now?
+
+There does not seem to be a single standard for HITL.
+
 A Model Context Protocol (MCP) server that bridges Claude Desktop with your HITL (Human In The Loop) escalation service. This allows Claude to create, approve, modify, reject, and manage HITL escalations directly from Claude Desktop.
 
 https://hub.docker.com/r/agentmp/hitl-mcp-server
